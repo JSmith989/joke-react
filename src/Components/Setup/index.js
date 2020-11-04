@@ -2,41 +2,52 @@ import React, { Component } from 'react';
 import jokeShape from '../../helpers/propz/jokeShape';
 
 export default class Joke extends Component {
-    static propTypes = {
-      joke: jokeShape,
-    }
+  static propTypes = {
+    jokes: jokeShape,
+  };
 
-    state = {
-      isBusy: this.props.joke.isBusy,
-    };
+  state = {
+    punchline: [],
+  };
+
+  getThePunchline = () => {
+    this.setState({
+      punchline: this.props.joke.punchline,
+    });
+  };
 
   updateJokeBtn = () => {
     this.setState({
-      isBusy: !this.state.isBusy,
+      punchline: !this.state.punchline,
     });
   };
 
   render() {
     const { joke } = this.props;
-    const { isBusy } = this.state;
+    const { punchline } = this.state;
 
     return (
-      <div className='joke col-3' id={joke.id}>
-        <div className='card'>
-          <div className='card-body'>
-            <p className='card-text'> {joke.setup}</p>
-            <p className='card-text'>{joke.punchline}</p>
-          </div>
+      <div className='col-3' id={joke.id}>
+          <h5> {joke.setup}</h5>
           <div className='card-footer'>
-            {isBusy ? (
+            {punchline ? (
               <>
-                <button className='btn btn-success' onClick={this.updateJokeBtn}>Get a Joke</button>
+                <button
+                  className='btn btn-success'
+                  onClick={this.updateJokeBtn}
+                >
+                  Punchline
+                </button>
               </>
             ) : (
-              <button className='btn btn-danger' onClick={this.updateJokeBtn}>Get Punchline</button>
+              <>
+              <p>{joke.punchline}</p>
+                {/* <button className='btn btn-danger' onClick={this.updateJokeBtn}>
+                  Get A Joke
+                </button> */}
+              </>
             )}
           </div>
-        </div>
       </div>
     );
   }
