@@ -27,8 +27,8 @@ export default class Joke extends Component {
     const { punchline } = this.state;
 
     return (
-      <div className='col-3' id={joke.id}>
-          <h5> {joke.setup}</h5>
+      <div className='card' id={joke.id}>
+          <h1> {joke.setup}</h1>
           <div className='card-footer'>
             {punchline ? (
               <>
@@ -41,10 +41,7 @@ export default class Joke extends Component {
               </>
             ) : (
               <>
-              <p>{joke.punchline}</p>
-                {/* <button className='btn btn-danger' onClick={this.updateJokeBtn}>
-                  Get A Joke
-                </button> */}
+              <h3>{joke.punchline}</h3>
               </>
             )}
           </div>
