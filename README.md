@@ -3,7 +3,8 @@ This is a simple and fun project to get us used to working with react. You click
 
 
 ## Deploy
-getjoke.netlify.app
+https://getjoke.netlify.app/
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6e99c247-3581-4723-8423-24b637163771/deploy-status)](https://app.netlify.com/sites/getjoke/deploys)
 
 
