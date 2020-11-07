@@ -10,4 +10,6 @@ https://getjoke.netlify.app/
 
 ## Screenshots
 ![Screen Shot 2020-11-07 at 10 00 16 AM](https://user-images.githubusercontent.com/67443077/98445923-1a3e8480-20e0-11eb-9343-aebabb9a92c6.png)
+
+
 ![Screen Shot 2020-11-07 at 10 00 30 AM](https://user-images.githubusercontent.com/67443077/98445926-1c084800-20e0-11eb-8e6f-376bce90386c.png)
